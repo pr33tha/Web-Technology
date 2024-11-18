@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Display</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      background: #e0f7fa;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>My Data</h1>
+    <ul id="dataList"></ul>
+  </div>
+
+  <script>
+    // Your data
+    const data = ["Coffee", "Juice", "Sandwich", "Pizza"];
+
+    // Reference to the list element
+    const dataList = document.getElementById("dataList");
+
+    // Populate the list
+    data.forEach(item => {
+      const listItem = document.createElement("li");
+      listItem.textContent = item;
+      dataList.appendChild(listItem);
+    });
+  </script>
+</body>
+</html>
